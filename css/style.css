@@ -1,0 +1,128 @@
+/*Add padding and margin to space out the page.
+Make the font larger too.*/
+body{
+	margin:1%;
+	padding:1%;
+	font-size:150%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FAE8E0;
+
+    /*PERHAPS CHANGING*/
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 50px;
+}
+
+.picgrid{
+    display:grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.picgrid span {
+    display:flex;
+    justify-content: center;
+
+}
+
+/* Add media queries */
+@media screen and (min-width: 750px) {
+    body {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .picgrid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .picgrid span{
+        align-items: start;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    body {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .picgrid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .picgrid span{
+        align-items: end;
+    }
+}
+
+/*Make the h1 heading bigger with a bold font*/
+h1{
+	font-size: 2em; 
+	font-weight: bold;
+}
+
+.active{
+    background-color: white;
+    color: black;
+    border: 5px dotted pink;
+}
+
+.active a{
+	text-decoration: none;;
+}
+
+.skip{
+    position: absolute;
+    right: 50px;
+    top: 10px;
+    font-size: 15px;
+}
+
+/*Style the images*/
+img{
+    height: 175px;
+	width: auto;
+    border: 5px dotted pink;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.icon img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    border: none;
+    margin: 0px 30px 0px 0px;
+}
+
+/*Make the h2 heading match h1*/
+h2{
+	font-size: 2em; 
+	font-weight: bold;
+}
+
+/*Improve the spacing for paragraphs AND headings*/
+p, h1, h2 {
+    padding: 10px;
+}
+
+/*Add borders around the main components and some
+space too*/
+header, nav, main, footer{
+	margin: 20px 0;
+}
+
+
+/*Change the styling for all of the list 
+items in the nav section*/
+nav li{
+    color: pink;
+	padding:10px;
+	width: 25%;
+	display: inline-block;
+	width: 20%;
+}
+
+/*Added this so the links stay the same color*/
+a:visited{color:rgb(104, 53, 104)}
